@@ -6,13 +6,47 @@
   height: 40vmin;
 }
 
+.App-title {
+  margin-left: 40px;
+  text-align: left;
+  color:white;
+  font-size: 50px;
+  /* font-family: "Montserrat"; */
+}
+
+.App-stay-on-track {
+  line-height: 400px;
+  font-size: 80px;
+}
+
+.App-register {
+  float: right;
+  margin-top: 20px;
+  margin-right: 100px;
+  color:white;
+  font-size: 20px;
+}
+
+.button {
+  margin-left: 800px;
+  margin-right: 800px;
+  padding-top: 1vmin;
+  padding-bottom: 1vmin;
+  text-align: center;
+  background-color: #8168FE;
+  color: white;
+  border-radius: 16px;
+}
+
 .App-header {
   background-color: #282c34;
+  background-image: linear-gradient(to right, #8168FE, #50E7FE);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  text-align: center;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
 }
