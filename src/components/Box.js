@@ -12,7 +12,7 @@ class Box extends Component {
 
   render() {
     return (
-      <Card bg="secondary" text="white" style={{ width: "18rem" }}>
+      <Card bg="dark" text="white" style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>{this.state.title}</Card.Title>
           <Card.Text>{this.state.blurb}</Card.Text>

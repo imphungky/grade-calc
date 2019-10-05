@@ -60,6 +60,7 @@
 
 .button {
   margin-top: 250px;
+  margin-right: 10px;
   display: inline-block;
   text-decoration: none;
   border: none;
@@ -110,6 +111,17 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.boxes {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  animation: btn;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 .home {
