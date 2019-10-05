@@ -14,9 +14,35 @@
   /* font-family: "Montserrat"; */
 }
 
+#title {
+  position: relative;
+  animation: title-anim;
+  animation-duration: 2s;
+}
+
+
+@keyframes title-anim {
+  0% {left: -240px;}
+  100% {left: 0px;}
+}
+
 .App-stay-on-track {
-  line-height: 400px;
+  position: relative;
+  top:50px;
   font-size: 80px;
+}
+
+#track {
+  position: relative;
+  animation: track-anim;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes track-anim {
+  0% {top: -200px;}
+  100% {top: 100px;}
 }
 
 .App-register {
@@ -28,14 +54,37 @@
 }
 
 .button {
-  margin-left: 800px;
-  margin-right: 800px;
+  margin: auto;
+  display:inline-block;
+  text-decoration: none;
+  border: none;
+  font-size: 32px;
   padding-top: 1vmin;
   padding-bottom: 1vmin;
+  position: relative;
+  opacity: 0;
+  top: -100px;
   text-align: center;
   background-color: #8168FE;
   color: white;
   border-radius: 16px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  animation: btn;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes btn {
+  0% {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+.button:hover {
+  background-color: skyblue;
 }
 
 .App-header {
