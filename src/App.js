@@ -1,5 +1,6 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Boxes from "./components/Boxes";
 
 function App() {
   return (
@@ -7,15 +8,19 @@ function App() {
       <header>
         <h1 className="App-title" id="title">
           <p className="App-register">login/register</p>
-          <span style={{color:'black'}}>grade</span>
-          <span style={{color:'white'}}>.io</span>
+          <span style={{ color: "black" }}>grade</span>
+          <span style={{ color: "white" }}>.io</span>
         </h1>
       </header>
       <header className="App-stay-on-track" id="track">
-          Stay on track of your grades
+        Stay on track of your grades
       </header>
-      <button className="button">Get Started</button>
-      <center> </center>
+      <header>
+        <center>
+          <button className="button">Get Started</button>
+          <Boxes />
+        </center>
+      </header>
     </div>
   );
 }

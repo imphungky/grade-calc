@@ -9,7 +9,7 @@
 .App-title {
   margin-left: 40px;
   text-align: left;
-  color:white;
+  color: white;
   font-size: 50px;
   /* font-family: "Montserrat"; */
 }
@@ -20,15 +20,17 @@
   animation-duration: 2s;
 }
 
-
 @keyframes title-anim {
-  0% {left: -240px;}
-  100% {left: 0px;}
+  0% {
+    left: -240px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 .App-stay-on-track {
   position: relative;
-  top:50px;
   font-size: 80px;
 }
 
@@ -37,25 +39,28 @@
   animation: track-anim;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  
 }
 
 @keyframes track-anim {
-  0% {top: -200px;}
-  100% {top: 100px;}
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 100px;
+  }
 }
 
 .App-register {
   float: right;
   margin-top: 20px;
   margin-right: 100px;
-  color:white;
+  color: white;
   font-size: 20px;
 }
 
 .button {
-  margin: auto;
-  display:inline-block;
+  margin-top: 250px;
+  display: inline-block;
   text-decoration: none;
   border: none;
   font-size: 32px;
@@ -65,7 +70,7 @@
   opacity: 0;
   top: -100px;
   text-align: center;
-  background-color: #8168FE;
+  background-color: #8168fe;
   color: white;
   border-radius: 16px;
   transition-property: all;
@@ -77,10 +82,13 @@
   animation-fill-mode: forwards;
 }
 
-
 @keyframes btn {
-  0% {opacity: 0;}
-  100% {opacity: 100;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 .button:hover {
@@ -89,7 +97,7 @@
 
 .App-header {
   background-color: #282c34;
-  background-image: linear-gradient(to right, #8168FE, #50E7FE);
+  background-image: linear-gradient(to right, #8168fe, #50e7fe);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -102,4 +110,8 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.home {
+  background-image: linear-gradient(to right, #8168fe, #50e7fe);
 }
