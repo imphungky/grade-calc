@@ -1,0 +1,9 @@
+.inline {
+  display: inline-block;
+  float: right;
+}
+
+.error {
+  backgroundcolor: "rgba(255, 100, 100, 0.85)";
+  color: "white";
+}
