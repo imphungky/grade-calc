@@ -1,0 +1,13 @@
+.App-calc-header {
+    background-image: linear-gradient(to right, #8168fe, #50e7fe);
+    min-height: 8vh;
+}
+
+.App-calc-header ul {
+    font-size: 36px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-right: 20px;
+}
+

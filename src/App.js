@@ -1,27 +1,17 @@
 import React from "react";
-import "./App.css";
-import Boxes from "./components/Boxes";
+import {BrowserRouter as Router,Switch, Route} from "react-router-dom";
+import Calc from "./components/Calc/Calc.js";
+import Landing from "./components/Landing-Page/Landing.js";
 
 function App() {
   return (
-    <div className="App-header">
-      <header>
-        <h1 className="App-title" id="title">
-          <p className="App-register">login/register</p>
-          <span style={{ color: "black" }}>grade</span>
-          <span style={{ color: "white" }}>.io</span>
-        </h1>
-      </header>
-      <header className="App-stay-on-track" id="track">
-        Stay on track of your grades
-      </header>
-      <header>
-        <center>
-          <button className="button">Get Started</button>
-          <Boxes />
-        </center>
-      </header>
-    </div>
+     <Router>
+       <Switch>
+        <Route path="/" exact component={Landing}/>
+        <Route path="/calc" component={Calc}/>
+       </Switch>
+     </Router>
+    
   );
 }
 
