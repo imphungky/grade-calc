@@ -88,7 +88,9 @@ class LoginModal extends Component {
             </Button>
           </center>
           <center>
-            <a onClick={this.openReg}>Don't have an account? Sign up.</a>
+            <a href="javascript:void(0)" onClick={this.openReg}>
+              Don't have an account? Sign up.
+            </a>
           </center>
         </Form>
       </Modal.Body>

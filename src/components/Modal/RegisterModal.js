@@ -148,7 +148,9 @@ class RegisterModal extends Component {
             </OverlayTrigger>
           </center>
           <center>
-            <a onClick={this.openLogin}>Have an account? Sign in.</a>
+            <a href="javascript:void(0)" onClick={this.openLogin}>
+              Have an account? Sign in.
+            </a>
           </center>
         </Form>
       </Modal.Body>

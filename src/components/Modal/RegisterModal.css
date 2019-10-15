@@ -7,3 +7,9 @@
   backgroundcolor: "rgba(255, 100, 100, 0.85)";
   color: "white";
 }
+
+.fake-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
