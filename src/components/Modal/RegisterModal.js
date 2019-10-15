@@ -3,6 +3,8 @@ import { Form, Modal, Button, Popover, OverlayTrigger } from "react-bootstrap";
 import "./RegisterModal.css";
 import axios from "axios";
 
+var passwordHash = require("password-hash");
+
 class RegisterModal extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,7 @@ class RegisterModal extends Component {
     this.onChangeConfirm = this.onChangeConfirm.bind(this);
     this.validate = this.validate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.openLogin = this.openLogin.bind(this);
   }
 
   onChangeEmail(e) {
@@ -45,6 +48,10 @@ class RegisterModal extends Component {
     });
   }
 
+  openLogin() {
+    this.props.callback({ showReg: false, showLog: true });
+  }
+
   validate() {
     if (!(this.state.email.includes("@") && this.state.email.includes("."))) {
       return false;
@@ -63,10 +70,12 @@ class RegisterModal extends Component {
       return;
     }
 
+    const hashPass = passwordHash.generate(this.state.password);
+
     const user = {
       email: this.state.email,
       username: this.state.username,
-      password: this.state.password
+      password: hashPass
     };
 
     axios
@@ -134,12 +143,12 @@ class RegisterModal extends Component {
           <center>
             <OverlayTrigger trigger="click" placement="right" overlay={popover}>
               <Button variant="primary" type="submit" onClick={this.onSubmit}>
-                Login
+                Sign up
               </Button>
             </OverlayTrigger>
           </center>
           <center>
-            <a href="/">Don't have an account? Sign up.</a>
+            <a onClick={this.openLogin}>Have an account? Sign in.</a>
           </center>
         </Form>
       </Modal.Body>

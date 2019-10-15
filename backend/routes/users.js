@@ -20,4 +20,10 @@ router.route("/add").post((req, res) => {
     .catch(err => res.status(400).json("Error: " + err));
 });
 
+router.route("/:email").get((req, res) => {
+  User.find(req.params)
+    .then(user => res.json(user))
+    .catch(err => res.status(400).json("Error: " + err));
+});
+
 module.exports = router;
