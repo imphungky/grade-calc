@@ -1,0 +1,28 @@
+.nav {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    width: 20vw;
+    background-image: linear-gradient(to right, #8168fe, #50e7fe);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.nav-anim {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    width: 20vw;
+    background-image: linear-gradient(to right, #8168fe, #50e7fe);
+    transform:translateX(0%);
+    transition: transform 0.3s ease-in;
+}
+
+.nav-ul {
+    margin-left: 15px;
+    color: white;
+    padding: 0;
+    height: 50vh;
+    font-size: 24px;
+
+}

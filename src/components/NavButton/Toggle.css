@@ -1,0 +1,18 @@
+.toggle-button {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    justify-content: space-evenly;
+    border: none;
+    height: 40px;
+    padding:0;
+    width: 40px;
+}
+
+.toggle-button-div {
+    width: 40px;
+    height: 4px;
+    background: white;
+}
+

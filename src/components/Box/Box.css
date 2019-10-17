@@ -1,0 +1,23 @@
+.box-style {
+    background-color: skyblue;
+    height: 20vh;
+    font-size: 40px;
+    width: 70vw;
+    border:none;
+}
+
+.card-style {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-right: 30px;
+    background-color: skyblue;
+    align-items: center;
+    height: 20vh;
+    width: 70vw;
+    border-radius: 30px;
+    border: none;
+}
+
+.card-title {
+    font-size: 36px;
+}
