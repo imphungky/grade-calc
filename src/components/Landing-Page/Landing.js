@@ -1,23 +1,56 @@
-import React from "react";
+import React, { Component } from "react";
+import { Modal } from "react-bootstrap";
 import "./Landing.css";
 import Boxes from "../Box/Boxes";
-import {Link} from "react-router-dom";
+import LoginModal from "../Modal/LoginModal";
+import RegisterModal from "../Modal/RegisterModal";
+import { Link } from "react-router-dom";
 
+class Landing extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showLog: false,
+      showReg: false
+    };
 
+    this.handleShowLog = this.handleShowLog.bind(this);
+    this.handleShowReg = this.handleShowReg.bind(this);
+    this.toggleCallback = this.toggleCallback.bind(this);
+  }
 
-function Landing() {
+  toggleCallback = data => {
+    this.setState({
+      showLog: data.showLog,
+      showReg: data.showReg
+    });
+  };
+
+  handleShowLog() {
+    this.setState({
+      showLog: !this.state.showLog
+    });
+  }
+
+  handleShowReg() {
+    this.setState({
+      showReg: !this.state.showReg
+    });
+  }
+
+  render() {
     return (
-        <div className="App-header">
+      <div className="App-header">
         <header>
           <h1 className="App-title" id="title">
-            <p 
-            className="App-register">login/register
-            </p>
-            <Link to="/" style={{ textDecoration: 'none'}}>
-            <a>
+            <a onClick={this.handleShowLog} className="App-register">
+              login/register
+            </a>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <a>
                 <span style={{ color: "black" }}>grade</span>
                 <span style={{ color: "white" }}>.io</span>
-            </a>    
+              </a>
             </Link>
           </h1>
         </header>
@@ -27,13 +60,28 @@ function Landing() {
         <header>
           <center>
             <Link to="/calc">
-                <button className="button">Get Started</button>
+              <button className="button">Get Started</button>
             </Link>
             <Boxes />
+            <Modal
+              centered
+              show={this.state.showLog}
+              onHide={this.handleShowLog}
+            >
+              <LoginModal callback={this.toggleCallback} />
+            </Modal>
+            <Modal
+              centered
+              show={this.state.showReg}
+              onHide={this.handleShowReg}
+            >
+              <RegisterModal callback={this.toggleCallback} />
+            </Modal>
           </center>
         </header>
       </div>
-    )
+    );
+  }
 }
 
 export default Landing;

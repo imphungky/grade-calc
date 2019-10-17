@@ -1,0 +1,10 @@
+.inline {
+  display: inline-block;
+  float: right;
+}
+
+.fake-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
