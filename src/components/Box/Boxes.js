@@ -19,14 +19,14 @@ class Boxes extends Component {
           </Col>
           <Col>
             <Box
-              title={"Add grades"}
-              blurb={"Add your grades over time to keep track!"}
+              title={"Add courses"}
+              blurb={"Calculate the averages of your courses!"}
             />
           </Col>
           <Col>
             <Box
-              title={"Add grades"}
-              blurb={"Add your grades over time to keep track!"}
+              title={"Calculate your required final exam mark!"}
+              blurb={"Find out what you need on the final exam to get that A+!"}
             />
           </Col>
         </Row>

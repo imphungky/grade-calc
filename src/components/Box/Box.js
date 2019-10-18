@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Card } from "react-bootstrap";
+import { MDBAnimation } from "mdbreact";
+import "./Box.css";
 
 class Box extends Component {
   constructor(props) {
@@ -12,12 +14,16 @@ class Box extends Component {
 
   render() {
     return (
-      <Card bg="secondary" text="white" style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>{this.state.title}</Card.Title>
-          <Card.Text>{this.state.blurb}</Card.Text>
-        </Card.Body>
-      </Card>
+      <MDBAnimation type="fadeIn" delay="2.5s" duration="1s">
+        <Card bg="secondary" text="white" style={{ width: "18rem" }}>
+          <Card.Body>
+            <Card.Title>{this.state.title}</Card.Title>
+            <Card.Text>
+              <p className="blurb">{this.state.blurb}</p>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </MDBAnimation>
     );
   }
 }
